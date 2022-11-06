@@ -1,0 +1,14 @@
+<app-header [title]="title"></app-header>
+
+<main class="content">
+
+  <div *ngIf="error">
+    <app-error-alert (onClose)="onErrorAlertClose()"
+                     [error]="error"></app-error-alert>
+  </div>
+
+  <app-main-form [isValidFile$]="isValidFile$" [errorText$]="errorText$"></app-main-form>
+
+</main>
+
+<app-footer></app-footer>
